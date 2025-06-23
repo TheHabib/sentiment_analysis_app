@@ -126,8 +126,8 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     try:
-        model = joblib.load('../models/sentiment_model.pkl')
-        vectorizer = joblib.load('../models/tfidf_vectorizer.pkl')
+        model = joblib.load('./models/sentiment_model.pkl')
+        vectorizer = joblib.load('./models/tfidf_vectorizer.pkl')
         return model, vectorizer
     except FileNotFoundError:
         st.error("⚠️ Model files not found. Please ensure 'sentiment_model.pkl' and 'tfidf_vectorizer.pkl' are in the same directory.")
